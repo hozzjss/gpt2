@@ -1,5 +1,11 @@
+import * as _ from 'lodash';
 class Classes {
-  constructor() {
+  grades
+  currentGrade
+  constructor($log) {
+    "ngInject";
+
+    this.$log = $log;
     this.grades = [
       {
         name: "grade for test 1",
@@ -118,9 +124,21 @@ class Classes {
     ];
   }
 
+  getCurrentGrade() {
+    return this.currentGrade;
+  }
+
   getGrades = () => {
     return this.grades;
   };
+
+  setCurrentGrade(grade) {
+    this.currentGrade = grade;
+  }
+  updateGradesData(grade) {
+    const index = _.findIndex(this.grades, this.currentGrade);
+    this.grades[index] = grade;
+  }
 };
 
 export default Classes;

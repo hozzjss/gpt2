@@ -3,9 +3,7 @@ import controller from './grade.controller';
 import './grade.scss';
 
 const gradeComponent = {
-  bindings: {
-    selected: '&'
-  },
+  bindings: {},
   template,
   controller
 };

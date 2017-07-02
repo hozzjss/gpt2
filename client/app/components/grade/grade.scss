@@ -6,6 +6,8 @@
   &, .select{
     width: 100%;
   }
+
+  // select simulator
   .select {
     cursor: pointer;
     display: flex;
@@ -32,28 +34,35 @@
   }
   // to simulate the action of the the select element
   // the ul needs a container that 
-  .options-container {
+  .grades-container {
     position: absolute;
     width: 100%;
     padding: 0 34px;
     box-sizing: border-box;
     margin-right: -34px;
-  }
-  .options {
-    border: 1px solid $grey;
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
-    .item {
-      background-color: #fff;
-      display: flex;
-      height: 50px;
-      align-items: center;
-      padding-right: 10px;
-      border-bottom: 1px solid $grey;
-      cursor: pointer;
-      &:hover {
-        background-color: $grey;
+    // if the user clicks outside that should close the select
+    // that is implemented by having the container take over the whole
+    // viewport and when they click anywhere while the showGrades is true
+    // it would change it to false and hide the options
+    height: 100%;
+    margin-top: -168px;
+    padding-top: 168px;
+    .grades {
+      border: 1px solid $grey;
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
+      .item {
+        background-color: #fff;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        padding-right: 10px;
+        border-bottom: 1px solid $grey;
+        cursor: pointer;
+        &:hover {
+          background-color: $grey;
+        }
       }
     }
   }

@@ -1,14 +1,14 @@
 <div class="grade">
-  <div class="select" ng-click="$ctrl.toggleOptions()">
-    <p> {{ $ctrl.currentOption.name }} </p>
+  <div class="select" ng-click="$ctrl.toggleGrades()">
+    <p> {{ $ctrl.currentGrade.name }} </p>
     <div class="arrow-down">
       <img src="./assets/down-arrow.png" alt="">
     </div>
   </div>
-  <div class="options-container">
-    <ul class="options" ng-show="$ctrl.showOptions">
-      <li ng-click="$ctrl.setCurrentOption(option);$ctrl.selected({option: option})"
-      class="item" ng-repeat="option in $ctrl.options"> {{ option.name }} </li>
+  <div class="grades-container" ng-click="$ctrl.showGrades=false" ng-show="$ctrl.showGrades">
+    <ul class="grades">
+      <li ng-click="$ctrl.setCurrentGrade(grade)"
+      class="item" ng-repeat="grade in $ctrl.grades"> {{ grade.name }} </li>
     </ul>
   </div>
 </div>

@@ -1,22 +1,29 @@
 class GradeController {
-  currentOption
+  currentGrade
   constructor(classes) {
     "ngInject";
 
     this.name = 'grade';
     this.classes = classes;
   }
-  setCurrentOption(option) {
-    this.currentOption = option;
-    this.toggleOptions();
+
+  setCurrentGrade(grade) {
+    this.currentGrade = grade;
+    this.classes.setCurrentGrade(grade);
+    this.toggleGrades();
   }
-  toggleOptions() {
-    this.showOptions = !this.showOptions;
+
+  toggleGrades() {
+    this.showGrades = !this.showGrades;
   }
+
+  getGrades() {
+    this.grades = this.classes.getGrades();
+    this.currentGrade = this.grades[0];
+  }
+
   $onInit() {
-    this.options = this.classes.getGrades();
-    this.currentOption = this.options[0];
-    this.selected({option: this.currentOption})
+    this.getGrades();
   }
 }
 
