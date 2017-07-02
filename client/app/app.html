@@ -1,4 +1,12 @@
 <!-- Place all UI elements intended to be present across all routes in this file -->
 <div class="app">
-  <div ui-view></div>
+  <navbar></navbar>
+  <notification ng-click="$ctrl.cancelNotify()" ng-show="$ctrl.notify"></notification>
+  <div class="note">
+    <p>اختر المادة ثم اختر الفصول التي تدرسها</p>
+    <div class="arrow-down"></div>
+  </div>
+  <main>
+    <grade selected="$ctrl.log(option)"></grade>
+  </main>
 </div>

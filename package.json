@@ -5,8 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "angular": "^1.5.0",
-    "angular-ui-router": "^1.0.0-beta.1",
-    "normalize.css": "^3.0.3"
+    "reset-css": "^2.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.7",
@@ -43,7 +42,7 @@
   },
   "scripts": {
     "build": "gulp webpack",
-    "component": "gulp component",
+    "component": "gulp component --name grade",
     "serve": "gulp serve",
     "start": "gulp serve",
     "test": "karma start",

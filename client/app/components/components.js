@@ -1,10 +1,10 @@
 import angular from 'angular';
-import Home from './home/home';
-import About from './about/about';
+import notification from './notification/notification';
+import grade from './grade/grade'
 
-let componentModule = angular.module('app.components', [
-  Home,
-  About
+const componentModule = angular.module('app.components', [
+  notification,
+  grade
 ])
 
 .name;
