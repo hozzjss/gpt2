@@ -1,0 +1,30 @@
+@import '../../common/common'; 
+
+.editor {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 1.2vh;
+  & > div {
+    width: 50%;
+    height: 45%;
+    h3 {
+      font-size: 14px;
+      height: 10vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+  }
+  .subjects {
+    h3 {
+      background-color: $purple;
+    }
+  }
+  .classes {
+    h3 {
+      background-color: $primaryColor;
+    }
+  }
+}

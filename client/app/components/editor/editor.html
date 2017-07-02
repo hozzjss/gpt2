@@ -1,0 +1,18 @@
+<div class="editor">
+  <div class="subjects">
+    <h3>المواد</h3>
+    <ul>
+      <li ng-repeat="subject in $ctrl.currentGrade.subjects">
+        <subject bg="$ctrl.setBg($index)" ng-click="$ctrl.selectSubject(subject)" subject="subject"></subject>
+      </li>
+    </ul>
+  </div>
+  <div class="classes">
+    <h3>الفصول</h3>
+    <ul>
+      <li ng-repeat="gpclass in $ctrl.currentSubject.classes">
+        <gpclass editable="$ctrl.currentSubject.selected" bg="$ctrl.setBg($index)" gpclass="gpclass"></gpclass>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -8,8 +8,8 @@ class GradeController {
   }
 
   setCurrentGrade(grade) {
-    this.currentGrade = grade;
     this.classes.setCurrentGrade(grade);
+    this.currentGrade = this.classes.getCurrentGrade();
     this.toggleGrades();
   }
 
@@ -19,7 +19,8 @@ class GradeController {
 
   getGrades() {
     this.grades = this.classes.getGrades();
-    this.currentGrade = this.grades[0];
+    this.classes.setCurrentGrade(this.grades[0]);
+    this.currentGrade = this.classes.getCurrentGrade();
   }
 
   $onInit() {

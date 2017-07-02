@@ -49,6 +49,8 @@
     padding-top: 168px;
     .grades {
       border: 1px solid $grey;
+      border-top: 0;
+      border-bottom: 0;
       width: 100%;
       box-sizing: border-box;
       position: relative;

@@ -1,0 +1,14 @@
+@import '../../common/common'; 
+.gpclass {
+  @include list-item;
+  color: $purple;
+  &.dark {
+    background-color: $grey;
+  }
+  &.light {
+    background-color: $light-grey;
+  }
+  &.disabled {
+    color: #aaa;
+  }
+}

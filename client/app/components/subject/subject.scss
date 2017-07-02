@@ -1,0 +1,14 @@
+@import '../../common/common'; 
+.subject {
+  @include list-item;
+  color: $primaryColor;
+  &.dark {
+    background-color: $grey;
+  }
+  &.light {
+    background-color: $light-grey;
+  }
+  &.active {
+    background-color: #919191;
+  }
+}
