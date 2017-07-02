@@ -1,5 +1,4 @@
 class GradeController {
-  showOptions = true;
   currentOption
   constructor(classes) {
     "ngInject";

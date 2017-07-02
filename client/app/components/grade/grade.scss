@@ -30,11 +30,20 @@
     }
 
   }
+  // to simulate the action of the the select element
+  // the ul needs a container that 
+  .options-container {
+    position: absolute;
+    width: 100%;
+    padding: 0 34px;
+    box-sizing: border-box;
+    margin-right: -34px;
+  }
   .options {
     border: 1px solid $grey;
     width: 100%;
     box-sizing: border-box;
-    position: absolute;
+    position: relative;
     .item {
       background-color: #fff;
       display: flex;

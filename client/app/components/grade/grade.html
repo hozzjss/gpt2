@@ -5,8 +5,10 @@
       <img src="./assets/down-arrow.png" alt="">
     </div>
   </div>
-  <ul class="options" ng-show="$ctrl.showOptions">
-    <li ng-click="$ctrl.setCurrentOption(option);$ctrl.selected({option: option})"
-     class="item" ng-repeat="option in $ctrl.options"> {{ option.name }} </li>
-  </ul>
+  <div class="options-container">
+    <ul class="options" ng-show="$ctrl.showOptions">
+      <li ng-click="$ctrl.setCurrentOption(option);$ctrl.selected({option: option})"
+      class="item" ng-repeat="option in $ctrl.options"> {{ option.name }} </li>
+    </ul>
+  </div>
 </div>
