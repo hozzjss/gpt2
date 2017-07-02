@@ -11,4 +11,5 @@
   &.active {
     background-color: #919191;
   }
+  @include checkbox;
 }

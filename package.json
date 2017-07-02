@@ -43,7 +43,7 @@
   },
   "scripts": {
     "build": "gulp webpack",
-    "component": "gulp component --name gpclass",
+    "component": "gulp component --name {{ component name goes here }}",
     "serve": "gulp serve",
     "start": "gulp serve",
     "test": "karma start",

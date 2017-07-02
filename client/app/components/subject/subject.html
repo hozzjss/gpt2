@@ -1,4 +1,8 @@
 <div ng-class="{'active': $ctrl.isCurrentSubject()}" class="subject {{$ctrl.bg}} ">
-  <input type="checkbox" name="" ng-model="$ctrl.subject.selected">
+  <input type="checkbox" hidden id="subject-{{$ctrl.subject.name}}" ng-model="$ctrl.subject.selected">
+  <label for="subject-{{$ctrl.subject.name}}">
+    <img ng-show="$ctrl.subject.selected" class="checked" src="./assets/check-box.png" alt="">
+    <img ng-hide="$ctrl.subject.selected" class="unchecked" src="./assets/plain-square.png" alt="">
+  </label>
   <span>{{ $ctrl.subject.name }}</span>
 </div>

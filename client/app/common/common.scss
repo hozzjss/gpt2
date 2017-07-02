@@ -17,6 +17,19 @@ $purple:         #c974f4;
   justify-content: center;
 }
 
+@mixin checkbox {
+    img {
+      display: inline-block;
+      margin-left: 5px;
+    }
+    img.checked {
+      height: 16px;
+    }
+    img.unchecked {
+      height: 16px;
+    }
+}
+
 body {
   direction: rtl;
   height: 100%;

@@ -1,7 +1,6 @@
 class SubjectController {
-  constructor($log, classes) {
+  constructor(classes) {
     "ngInject";
-    this.$log = $log;
     this.classes = classes;
     this.name = 'subject';
   }

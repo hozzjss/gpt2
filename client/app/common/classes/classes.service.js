@@ -1,11 +1,10 @@
-import * as _ from 'lodash';
+import { findIndex } from 'lodash';
 class Classes {
   grades
   currentGrade
-  constructor($log, $rootScope) {
+  constructor($rootScope) {
     "ngInject";
 
-    this.$log = $log;
     this.$rootScope = $rootScope;
     this.grades = [
       {
@@ -282,8 +281,9 @@ class Classes {
   }
   
   updateGradesData(grade) {
-    const index = _.findIndex(this.grades, this.currentGrade);
+    const index = findIndex(this.grades, this.currentGrade);
     this.grades[index] = grade;
+    this.$rootScope.$broadcast('onDataUpdated');
   }
 };
 

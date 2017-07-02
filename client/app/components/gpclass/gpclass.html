@@ -1,4 +1,10 @@
 <div ng-class="{'disabled': !$ctrl.editable}" class="{{ $ctrl.bg }} gpclass">
-  <input ng-disabled="!$ctrl.editable" type="checkbox" ng-model="$ctrl.gpclass.selected" name="" value="">
-  <span>فصل {{ $ctrl.gpclass.name }}</span>
+  <label for="gpswitch-{{$ctrl.gpclass.name}}">
+    <input hidden ng-disabled="!$ctrl.editable"
+    type="checkbox" ng-model="$ctrl.gpclass.selected" 
+    id="gpswitch-{{$ctrl.gpclass.name}}" value="">
+    <img ng-show="$ctrl.gpclass.selected" class="checked" src="./assets/check-box.png" alt="">
+    <img ng-hide="$ctrl.gpclass.selected" class="unchecked" src="./assets/plain-square.png" alt="">
+    <span>فصل {{ $ctrl.gpclass.name }}</span>
+  </label>
 </div>

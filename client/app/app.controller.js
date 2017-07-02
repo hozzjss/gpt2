@@ -1,7 +1,8 @@
 class AppController {
-    constructor($log) {
+    constructor($timeout, $scope) {
         'ngInject';
-        this.$log = $log;
+        this.$scope = $scope;
+        this.$timeout = $timeout;
     }
 
     cancelNotify() {
@@ -10,13 +11,11 @@ class AppController {
 
     startNotify() {
         this.notify = true;
-    }
-
-    log(item) {
-        this.$log.log(item);
+        this.$timeout(() => this.notify = false, 2000);
     }
 
     $onInit() {
+        this.$scope.$on('onDataUpdated', this.startNotify.bind(this));
     }
 }
 
